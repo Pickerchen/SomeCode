@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_tooltip"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:padding="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:layout_centerInParent="true" >
+
+            <com.sen5.ocup.gui.NumberPicker
+                android:id="@+id/picker_date_year"
+                style="@style/NumberPickerYear"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+
+            <TextView
+	            android:layout_width="20dip"
+	            android:layout_height="wrap_content" />
+
+            <com.sen5.ocup.gui.NumberPicker
+                android:id="@+id/picker_date_month"
+                style="@style/NumberPickerMonth"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+        </LinearLayout>
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="40dip"
+            android:src="@drawable/input_frame"
+            android:scaleType="fitXY"
+            android:contentDescription="@string/app_name"
+            android:layout_centerInParent="true" />
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="#747474"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@android:color/transparent" >
+
+        <Button
+            android:background="@color/whitetextcolor"
+            android:id="@+id/btn_date_ok"
+            android:layout_width="0dip"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="@string/ok"
+            android:textColor="@color/bluetextcolor"
+            android:textSize="16sp" />
+
+        <View
+            android:layout_width="0.5dp"
+            android:layout_height="match_parent"
+            android:background="#747474"
+            />
+
+        <Button
+            android:background="@color/whitetextcolor"
+            android:id="@+id/btn_date_cancel"
+            android:layout_width="0dip"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="@string/cancel"
+            android:textColor="@color/bluetextcolor"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+</LinearLayout>

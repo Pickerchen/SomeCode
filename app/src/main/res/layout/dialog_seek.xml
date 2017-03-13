@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:seekarc="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="320dp"
+    android:layout_margin="10dp"
+    android:background="@color/whitetextcolor" >
+
+    <com.sen5.ocup.gui.SeekArc
+        android:id="@+id/bangThreshold"
+        android:layout_width="wrap_content"
+        android:layout_height="280dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:paddingLeft="40dp"
+        android:paddingRight="40dp"
+        seekarc:arcWidth="10dp"
+        seekarc:progressColor="@android:color/transparent"
+        seekarc:progressWidth="10dp"
+        seekarc:rotation="180"
+        seekarc:roundEdges="true"
+        seekarc:startAngle="45"
+        seekarc:sweepAngle="270"
+        seekarc:touchInside="false" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="40dp"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/seek_text_light"
+            android:textColor="@color/smalltextcolor"
+            android:textSize="@dimen/seek_size" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/seek_text_strong"
+            android:textColor="@color/smalltextcolor"
+            android:textSize="@dimen/seek_size" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="10dp"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/seek_text_tw"
+            android:textSize="@dimen/seek_size"
+            android:textColor="@color/textcolor" />
+    </LinearLayout>
+
+</RelativeLayout>

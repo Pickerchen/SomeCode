@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:background="#FFFFFF"
+ android:padding="5dp">	     				
+		 <LinearLayout  
+		      android:id="@+id/ffffffff"   
+		      android:layout_width="match_parent"  
+		      android:layout_height="wrap_content"
+		      android:layout_gravity="center_vertical"
+		      android:paddingTop="10dp"
+		      android:paddingBottom="10dp"
+		      android:layout_centerVertical="true"		      
+		      android:orientation="horizontal" >  
+			    <TextView  
+			        android:id="@+id/alarm_time" 
+			        android:text="dfdfdg" 
+			        android:layout_width="0dp"   
+			        android:layout_height="wrap_content" 
+			        android:layout_weight="3"
+			        android:paddingLeft="10dp"
+			        android:paddingRight="10dp"
+			        android:textColor="@color/gray_text_color"
+			        android:layout_gravity="center_vertical" 
+			        android:textSize="22sp"   
+			    /> 
+			    
+			    <com.sen5.ocup.gui.SwitchView
+                android:id="@+id/show_open_close"  
+		        android:layout_width="0dp"  
+		        android:layout_height="wrap_content" 
+		        android:layout_weight="0.85"
+		        android:layout_gravity="right"
+		        android:layout_marginRight="10dp"
+		        android:focusable="false"
+		        />
+			    			    
+		     </LinearLayout>
+        <!--  <View
+          android:layout_width="fill_parent"
+	      android:layout_height="1dp"
+	      android:textColor="#c7d3d8"/> -->
+          
+         <!--  <ImageView
+	      android:id="@+id/show_open_close"
+	      android:layout_alignRight="@+id/ffffffff"
+	      android:layout_width="wrap_content"
+	      android:layout_alignParentRight="true"
+	      android:layout_centerInParent="true"
+	      android:layout_marginRight="20dp"
+	      android:layout_height="wrap_content"
+	  /> -->
+          
+      
+
+</RelativeLayout>
+
+

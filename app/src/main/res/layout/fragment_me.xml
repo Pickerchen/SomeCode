@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical"
+    >
+    <FrameLayout
+        android:id="@+id/durian_head_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/main_color" >
+        <RelativeLayout
+            android:id="@+id/title_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="60dp"
+            >
+
+            <ImageView
+                android:id="@+id/iv_bluetooth_state"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_centerVertical="true"
+                android:clickable="true"
+                android:padding="10dp"
+                android:src="@drawable/btn_bluetooth_inactive" />
+
+            <com.sen5.ocup.gui.SegoTextView
+                android:id="@+id/tv_title"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:text="@string/nuanni"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="#FFFFFF" />
+
+            <ProgressBar
+                android:id="@+id/pb_bluetooth_connecting"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_centerVertical="true"
+                android:indeterminateDrawable="@drawable/load_progressbar_style"
+                android:padding="15dp"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/data_bt"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dp"
+                android:clickable="true"
+                android:padding="5dp"
+                android:visibility="gone"
+                android:scaleType="centerInside"
+                android:src="@drawable/share_data_bg" />
+        </RelativeLayout>
+    </FrameLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@drawable/bg"
+        >
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="3"
+            >
+            <ImageView
+                android:id="@+id/iv_temp"
+                android:layout_width="match_parent"
+                android:layout_marginLeft="40dp"
+                android:layout_marginRight="40dp"
+                android:layout_height="match_parent"
+                android:src="@drawable/temp1"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="40dp"
+                />
+            <TextView
+                android:id="@+id/tv_curtemprature"
+                android:layout_width="fill_parent"
+                android:layout_height="match_parent"
+                android:textSize="68dp"
+                android:textColor="@color/whitetextcolor"
+                android:layout_marginBottom="30dp"
+                android:gravity="center"
+                android:textAppearance="?android:attr/textAppearanceLarge"/>
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="140dp"
+                android:text="@string/cur_watertemperature"
+                android:gravity="center"
+                android:textSize="30dp"
+                android:textColor="@color/whitetextcolor"
+                />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            >
+            <TextView
+                android:lineSpacingExtra="2dp"
+                android:id="@+id/tv_nuanni"
+                android:layout_marginLeft="40dp"
+                android:textColor="@color/main_color"
+                android:textSize="13dp"
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/ome_tips"
+                />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

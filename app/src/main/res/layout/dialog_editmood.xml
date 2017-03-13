@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/input_frame"
+        android:gravity="center"
+        android:orientation="vertical" >
+
+        <EditText
+            android:id="@+id/et_dia_content"
+            android:layout_width="fill_parent"
+            android:layout_height="0dp"
+            android:layout_weight="4"
+            android:background="@color/transparent"
+            android:digits="0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ.- "
+            android:minLines="3"
+            android:padding="5dp"
+            android:singleLine="false"
+            android:textColor="#3d3d3d"
+            android:textColorHighlight="#2caff6"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/tv_offset"
+            android:layout_width="fill_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:gravity="right"
+           android:textColor="@color/smalltextcolor"
+            android:textSize="16sp" 
+            android:visibility="gone"/>
+    </LinearLayout>
+
+    <com.sen5.ocup.gui.MTextView
+        android:id="@+id/tv_feeling_tips"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="10dp"
+        android:textColor="#7a7a7a"
+        android:textAppearance="?android:attr/textAppearanceSmall" />
+    <!-- com.sen5.ocup.gui. -->
+    <!-- android:text="@string/edit_feeling_tip" -->
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:gravity="center" >
+
+        <Button
+            android:id="@+id/btn_cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/selector_dialog_mood"
+            android:gravity="center"
+            android:minWidth="90dp"
+            android:padding="10dp"
+            android:layout_marginRight="20dp"
+            android:text="@string/cancel"
+            android:textColor="#fff"
+            android:textSize="16sp" />
+
+        <Button
+            android:id="@+id/btn_ok"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/selector_dialog_mood2"
+            android:gravity="center"
+            android:minWidth="90dp"
+            android:padding="10dp"
+            android:text="@string/ok"
+            android:textColor="#fff"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+</LinearLayout>

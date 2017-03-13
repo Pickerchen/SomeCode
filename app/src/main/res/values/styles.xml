@@ -1,0 +1,323 @@
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!--
+        Base application theme, dependent on API level. This theme is replaced
+        by AppBaseTheme from res/values-vXX/styles.xml on newer devices.
+
+    -->
+    <style name="AppBaseTheme" parent="android:Theme.Light"></style>
+    <!-- 设置背景图Theme -->
+    <style name="Theme.AppStartLoad" parent="android:Theme">
+        <item name="android:windowNoTitle">true</item>
+    </style>
+
+    <style name="Theme.AppCompat.Light.NoActionBar.fullScreen" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="windowNoTitle">true</item>
+        <item name="windowActionBar">false</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="colorAccent">@color/main_color</item>
+    </style>
+
+    <style name="Transparent" parent="android:Theme.Light">
+
+        <!-- 将Activity的Theme设置成透明 -->
+        <item name="android:windowIsTranslucent">true</item>
+    </style>
+    <!-- Application theme. -->
+    <style name="AppTheme" parent="AppBaseTheme">
+
+        <!-- All customizations that are NOT specific to a particular API-level can go here. -->
+        <!-- <item name="android:windowBackground">@drawable/start_img</item> -->
+        <item name="android:windowNoTitle">true</item>
+    </style>
+    <style name="startUPTheme" parent="@android:style/Theme.NoTitleBar.Fullscreen">
+        <item name="android:windowBackground">@android:color/transparent</item>
+    </style>
+    <!-- <item name="android:windowBackground">@drawable/gif_11</item> -->
+
+
+    <!-- <style name="ShareDialog" parent="@android:style/Theme.Dialog"> -->
+    <!-- <item name="android:windowNoTitle">true</item> -->
+    <!-- <item name="android:windowFrame">@null</item> -->
+    <!-- <item name="android:windowIsFloating">true</item> -->
+    <!-- <item name="android:windowIsTranslucent">false</item> -->
+    <!-- <item name="android:windowBackground">@drawable/bg_listitem_blur</item> -->
+    <!-- <item name="android:backgroundDimEnabled">false</item> -->
+    <!-- </style> -->
+
+    <style name="chat_content_date_style">
+        <item name="android:minHeight">50dp</item>
+        <item name="android:gravity">left|center</item>
+        <item name="android:textColor">#000000</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:lineSpacingExtra">2dp</item>
+        <item name="android:clickable">true</item>
+        <item name="android:focusable">true</item>
+        <item name="android:background">#bfbfbf</item>
+    </style>
+
+    <style name="chat_text_name_style">
+        <item name="android:textColor">#818181</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="chat_text_date_style">
+        <item name="android:padding">2dp</item>
+        <item name="android:textColor">#ffffff</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:background">@drawable/chat_send_time_bg</item>
+    </style>
+
+    <style name="custom_dialog" parent="@android:style/Theme.Dialog">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowIsTranslucent">false</item>
+        <!-- @drawable/bg_listitem_blur -->
+        <item name="android:windowBackground">@drawable/bg_tooltip</item>
+        <!-- <item name="android:windowBackground">@color/whitetextcolor</item> -->
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:windowCloseOnTouchOutside">false</item>
+    </style>
+    <style name="custom_dialog_loading" parent="@android:style/Theme.Dialog">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowIsTranslucent">false</item>
+        <!-- @drawable/bg_listitem_blur -->
+        <item name="android:windowBackground">@color/transparent</item>
+        <!-- <item name="android:windowBackground">@color/whitetextcolor</item> -->
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:windowCloseOnTouchOutside">false</item>
+    </style>
+
+    <style name="CustomDialog" parent="@android:style/Theme.Dialog">
+        <!--<item name="android:windowFullscreen">false</item>-->
+        <!--<item name="android:windowContentOverlay">@null</item>-->
+        <item name="android:windowFrame">@null</item>
+        <!-- 边框 -->
+        <item name="android:windowIsFloating">true</item>
+        <!-- 是否浮现在activity之上 -->
+        <item name="android:windowIsTranslucent">false</item>
+        <!-- 半透明 -->
+        <item name="android:windowNoTitle">true</item>
+        <!-- 无标题 -->
+        <!--<item name="android:background">@android:color/transparent</item>-->
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <!-- 背景透明 -->
+        <item name="android:backgroundDimEnabled">true</item>
+        <!-- 模糊 -->
+        <!--<item name="android:backgroundDimAmount">0.8</item>-->
+        <!-- 动画 -->
+        <!-- <item name="android:windowAnimationStyle">@+android:style/Animation.Translucent</item> -->
+    </style>
+
+    <style name="select_dialog" parent="@android:style/Theme.Dialog">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowIsTranslucent">false</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+    </style>
+
+    <style name="popwin_anim_style">
+        <item name="android:windowEnterAnimation">@anim/pop_enter</item>
+        <item name="android:windowExitAnimation">@anim/pop_out</item>
+    </style>
+
+    <!-- pop变暗处理 -->
+    <style name="dialog" parent="@android:style/Theme.Dialog">
+        <item name="android:backgroundDimEnabled">true</item>
+    </style>
+    <!-- radiobutton 自定义样式 -->
+    <style name="radiobutton_red">
+        <item name="android:background">@null</item>
+        <item name="android:button">@drawable/red_sel</item>
+        <item name="android:text">@string/red</item>
+        <item name="android:textColor">#ff0000</item>
+    </style>
+
+    <style name="radiobutton_yellow">
+        <item name="android:background">@null</item>
+        <item name="android:button">@drawable/yellow_sel</item>
+        <item name="android:text">@string/yellow</item>
+        <item name="android:textColor">#ff9500</item>
+    </style>
+
+    <style name="radiobutton_blue">
+        <item name="android:background">@null</item>
+        <item name="android:button">@drawable/blue_sel</item>
+        <item name="android:text">@string/blue</item>
+        <item name="android:textColor">#0474ff</item>
+    </style>
+
+    <style name="radiobutton_cyan">
+        <item name="android:background">@null</item>
+        <item name="android:button">@drawable/cyan_sel</item>
+        <item name="android:text">@string/cyan</item>
+        <item name="android:textColor">#00be9c</item>
+    </style>
+
+    <style name="radiobutton_purple">
+        <item name="android:background">@null</item>
+        <item name="android:button">@drawable/purple_sel</item>
+        <item name="android:text">@string/purple</item>
+        <item name="android:textColor">#d200d5</item>
+    </style>
+
+    <style name="radiobutton_green">
+        <item name="android:background">@null</item>
+        <item name="android:button">@drawable/green_sel</item>
+        <item name="android:text">@string/green</item>
+        <item name="android:textColor">#58db58</item>
+    </style>
+
+    <style name="radiobutton_white">
+        <item name="android:background">@null</item>
+        <item name="android:button">@drawable/white_sel</item>
+        <item name="android:text">@string/white</item>
+        <item name="android:textColor">#d7d7d7</item>
+    </style>
+    <!-- 闹钟 -->
+    <style name="alarm_list_left_column">
+        <item name="android:layout_width">68dip</item>
+        <item name="android:layout_height">68dip</item>
+    </style>
+
+    <style name="clock">
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">fill_parent</item>
+        <item name="android:layout_gravity">center_horizontal</item>
+    </style>
+
+    <!--
+         This theme is similar to the Theme.Dialog.Alert but does not rely on a
+         non-public resource.
+
+    -->
+    <style name="alarm_alert" parent="android:Theme.Dialog">
+        <item name="android:windowBackground">@android:color/transparent</item>
+    </style>
+
+    <style name="NumberProgressBar_Default">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="max">100</item>
+        <item name="progress">0</item>
+        <item name="progress_unreached_color">#CCCCCC</item>
+        <item name="progress_reached_color">#3498DB</item>
+        <item name="progress_text_size">18sp</item>
+        <item name="progress_text_color">#3498DB</item>
+        <item name="progress_reached_bar_height">3dp</item>
+        <item name="progress_unreached_bar_height">1dp</item>
+    </style>
+
+    <style name="NumberProgressBar_updatecup">
+        <item name="android:layout_height">50dp</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="max">100</item>
+        <item name="progress">0</item>
+        <item name="progress_unreached_color">#88CFFF</item>
+        <item name="progress_reached_color">#2eabff</item>
+        <item name="progress_text_size">0sp</item>
+        <item name="progress_text_color">#fff</item>
+        <item name="progress_reached_bar_height">50dp</item>
+        <item name="progress_unreached_bar_height">50dp</item>
+    </style>
+
+    <style name="NumberProgressBar_tea">
+        <item name="android:layout_height">50dp</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="max">100</item>
+        <item name="progress">0</item>
+        <item name="progress_unreached_color">#979798</item>
+        <item name="progress_reached_color">#cd3399</item>
+        <item name="progress_text_size">0sp</item>
+        <item name="progress_text_color">#fff</item>
+        <item name="progress_reached_bar_height">50dp</item>
+        <item name="progress_unreached_bar_height">50dp</item>
+    </style>
+
+    <style name="NumberProgressBar_downapk">
+        <item name="android:layout_height">15dp</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="max">100</item>
+        <item name="progress">0</item>
+        <item name="progress_unreached_color">#88CFFF</item>
+        <item name="progress_reached_color">#2eabff</item>
+        <item name="progress_text_size">0sp</item>
+        <item name="progress_text_color">#fff</item>
+        <item name="progress_reached_bar_height">15dp</item>
+        <item name="progress_unreached_bar_height">15dp</item>
+    </style>
+
+    <style name="dialogStyle" parent="android:style/Theme.Dialog">
+        <item name="android:background">#00000000</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowIsTranslucent">false</item>
+        <item name="android:backgroundDimEnabled">true</item>
+    </style>
+
+    <!-- NumberPicker -->
+    <style name="NPWidget">
+        <item name="android:textAppearance">?android:attr/textAppearance</item>
+    </style>
+
+    <style name="NPWidget.NumberPicker">
+        <item name="android:orientation">vertical</item>
+        <item name="android:fadingEdge">vertical</item>
+        <item name="android:fadingEdgeLength">50dip</item>
+    </style>
+
+    <style name="NPWidget.Holo.NumberPicker" parent="NPWidget.NumberPicker">
+        <item name="solidColor">@android:color/transparent</item>
+        <item name="selectionDivider">@null</item>
+        <item name="selectionDividerHeight">2dip</item>
+        <item name="internalLayout">@layout/number_picker_with_selector_wheel</item>
+        <item name="internalMaxHeight">180dip</item>
+        <item name="virtualButtonPressedDrawable">@drawable/item_background_holo_light</item>
+    </style>
+
+    <style name="NumberPickerYear" parent="NPWidget.Holo.NumberPicker">
+        <item name="internalMinWidth">100dip</item>
+    </style>
+
+    <style name="NumberPickerMonth" parent="NPWidget.Holo.NumberPicker">
+        <item name="internalMinWidth">64dip</item>
+    </style>
+
+
+    <!--以下两个样式为哄你界面的弹框-->
+    <style name="AnimHead" parent="@android:style/Animation">
+        <item name="android:windowEnterAnimation">@anim/in</item>
+        <item name="android:windowExitAnimation">@anim/out</item>
+        <!-- 半透明 -->
+        <item name="android:windowIsTranslucent">true</item>
+    </style>
+
+    <style name="titleStyle1">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:textColor">#fff</item>
+    </style>
+
+    <!--注册界面LoadingBar-->
+    <style name="SpinKitView">
+        <item name="android:indeterminateOnly">true</item>
+        <item name="android:minWidth">48dip</item>
+        <item name="android:maxWidth">48dip</item>
+        <item name="android:minHeight">48dip</item>
+        <item name="android:maxHeight">48dip</item>
+    </style>
+
+    <style name="SpinKitView.Circle">
+        <item name="SpinKit_Style">Circle</item>
+    </style>
+
+</resources>

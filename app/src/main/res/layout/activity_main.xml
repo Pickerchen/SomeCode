@@ -1,0 +1,180 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/layout_main"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:background="#fff" >
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/viewPager"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_above="@+id/tv_devider"
+            android:layout_alignParentTop="true"
+            android:layout_gravity="center" />
+
+        <TextView
+            android:id="@+id/tv_devider"
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:layout_above="@+id/tab_layout"
+            android:background="#e2e2e2" />
+
+        <RelativeLayout
+            android:id="@+id/tab_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="60dp"
+            android:layout_alignParentBottom="true"
+            android:orientation="horizontal" >
+
+            <LinearLayout
+                android:id="@+id/layout_tab"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:background="#ffffff"
+                android:orientation="horizontal" >
+
+                <RelativeLayout
+                    android:id="@+id/one_tab"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="5dp"
+                    android:layout_weight="1" >
+
+                    <ImageView
+                        android:id="@+id/iv_user"
+                        android:layout_width="match_parent"
+                        android:layout_height="37dp"
+                        android:background="@android:color/transparent"
+                        android:gravity="center"
+                        android:paddingBottom="2dp"
+                        android:paddingLeft="8dp"
+                        android:paddingRight="8dp"
+                        android:paddingTop="2dp"
+                        android:scaleType="centerInside"
+                        android:src="@drawable/ic_temperature_selected" />
+
+                    <TextView
+                        android:id="@+id/iv_user_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="25dp"
+                        android:layout_below="@+id/iv_user"
+                        android:layout_centerHorizontal="true"
+                        android:paddingTop="2dp"
+                        android:text="@string/nuanni"
+                        android:textSize="12dp"
+                        android:textColor="@color/main_color" />
+                </RelativeLayout>
+                <!-- android:background="@drawable/tab_fuocus_bg" -->
+
+                <RelativeLayout
+                    android:id="@+id/two_tab"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="5dp"
+                    android:layout_weight="1" >
+
+                    <ImageView
+                        android:id="@+id/iv_tip"
+                        android:layout_width="match_parent"
+                        android:layout_height="37dp"
+                        android:background="@android:color/transparent"
+                        android:gravity="center"
+                        android:paddingBottom="2dp"
+                        android:paddingLeft="8dp"
+                        android:paddingRight="8dp"
+                        android:paddingTop="2dp"
+                        android:scaleType="centerInside"
+                        android:src="@drawable/ic_chat_default" />
+
+                    <TextView
+                        android:id="@+id/iv_tip_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="25dp"
+                        android:layout_below="@+id/iv_tip"
+                        android:layout_centerHorizontal="true"
+                        android:paddingTop="2dp"
+                        android:text="@string/hongni"
+                        android:textSize="12dp"
+                        android:textColor="#595757" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/three_tab"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="5dp"
+                    android:layout_weight="1" >
+
+                    <ImageView
+                        android:id="@+id/iv_shortcut"
+                        android:layout_width="match_parent"
+                        android:layout_height="37dp"
+                        android:background="@android:color/transparent"
+                        android:gravity="center"
+                        android:paddingBottom="2dp"
+                        android:paddingLeft="8dp"
+                        android:paddingRight="8dp"
+                        android:paddingTop="2dp"
+                        android:scaleType="centerInside"
+                        android:src="@drawable/ic_shop_default" />
+
+                    <TextView
+                        android:id="@+id/iv_shortcut_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="25dp"
+                        android:layout_below="@+id/iv_shortcut"
+                        android:layout_centerHorizontal="true"
+                        android:paddingTop="2dp"
+                        android:text="@string/shop"
+                        android:textSize="12dp"
+                        android:textColor="#595757" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/four_tab"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="5dp"
+                    android:layout_weight="1" >
+
+                    <ImageView
+                        android:id="@+id/iv_heart"
+                        android:layout_width="match_parent"
+                        android:layout_height="37dp"
+                        android:background="@android:color/transparent"
+                        android:gravity="center"
+                        android:paddingBottom="2dp"
+                        android:paddingLeft="8dp"
+                        android:paddingRight="8dp"
+                        android:paddingTop="2dp"
+                        android:scaleType="centerInside"
+                        android:src="@drawable/ic_settings_default" />
+                    <TextView
+                        android:id="@+id/iv_heart_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="25dp"
+                        android:layout_below="@+id/iv_heart"
+                        android:layout_centerHorizontal="true"
+                        android:text="@string/title_setting"
+                        android:textSize="12dp"
+                        android:textColor="#595757" />
+                </RelativeLayout>
+            </LinearLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <!-- <com.sen5.ocup.gui.TypegifView -->
+    <!-- android:id="@+id/gifView1" -->
+    <!-- android:layout_width="fill_parent" -->
+    <!-- android:layout_height="wrap_content" -->
+    <!-- android:visibility="invisible" -->
+    <!-- gif:delay="1" -->
+    <!-- gif:src="@raw/startup" -->
+    <!-- gif:stop="true" > -->
+    <!-- </com.sen5.ocup.gui.TypegifView> -->
+
+</RelativeLayout>

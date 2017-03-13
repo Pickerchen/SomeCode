@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:paddingLeft="20dp"
+    android:paddingRight="20dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/shape_select_avatar"
+        >
+    <TextView
+        android:id="@+id/txt_from_camera"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="10dp"
+        android:paddingTop="10dp"
+        android:gravity="center"
+        android:text="@string/camera"
+        android:textColor="#000"
+        android:textSize="22sp" 
+        android:clickable="true" />
+     <TextView
+        android:id="@+id/tv_devider"
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:background="#cbcbcb" />
+
+    <TextView
+        android:id="@+id/txt_from_photo"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:gravity="center"
+        android:text="@string/from_photo"
+        android:textColor="#000"
+        android:textSize="22sp" 
+        android:clickable="true" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/txt_cancel"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/shape_select_avatar"
+        android:layout_marginTop="20dp"
+        android:paddingBottom="10dp"
+        android:paddingTop="10dp"
+        android:gravity="center"
+        android:text="@string/cancel"
+        android:textColor="@color/main_color"
+        android:textSize="22sp"
+        android:clickable="true" />
+
+</LinearLayout>

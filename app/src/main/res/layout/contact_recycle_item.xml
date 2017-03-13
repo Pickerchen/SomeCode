@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+
+
+    <LinearLayout
+        android:layout_marginTop="10dp"
+        android:id="@+id/contachInfo"
+        android:layout_width="fill_parent"
+        android:layout_height="60dip"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <com.sen5.ocup.yili.CircleImageView
+            android:id="@+id/imgHead"
+            android:src="@drawable/user_me"
+            android:layout_marginLeft="20dp"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:layout_centerInParent="true"
+            app:border_color="@color/whitetextcolor"
+            />
+
+        <LinearLayout
+            android:id="@+id/phoneLayout"
+            android:layout_width="0dp"
+            android:layout_weight="1.5"
+            android:layout_height="fill_parent"
+            android:gravity="center_vertical"
+            android:orientation="vertical"
+            android:layout_marginLeft="10dp"
+            >
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_marginLeft="15dp"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_gravity="center_vertical"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:layout_weight="1.0"
+                android:textColor="#3d3d3d"
+                android:textSize="18sp"/>
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1.5"
+            >
+
+            <Button
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="30dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="16dp"
+                android:layout_width="80dp"
+                android:layout_height="fill_parent"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:text="+ 邀请"
+                android:textColor="@color/yili_contacts_invite_text_selector"
+                android:id="@+id/btn_invite"
+                android:background="@drawable/yili_contacts_invite_selector"
+                />
+
+            <Button
+                android:visibility="gone"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="30dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="16dp"
+                android:layout_width="80dp"
+                android:layout_height="fill_parent"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:id="@+id/btn_addFriend"
+                android:text="+ 添加"
+                android:textColor="@color/yili_contacts_add_text_selector"
+                android:background="@drawable/yili_contacts_add_selector"
+                />
+
+            <Button
+                android:visibility="gone"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="30dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="16dp"
+                android:layout_width="80dp"
+                android:layout_height="fill_parent"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:text="好 友"
+                android:id="@+id/btn_friend"
+                android:textColor="@color/main_color"
+                android:background="@drawable/yili_contacts_friend"
+                />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.1dp"
+        android:background="#e2e2e2"
+        android:layout_marginLeft="100dp"
+        android:layout_marginRight="25dp"
+        />
+
+</LinearLayout>

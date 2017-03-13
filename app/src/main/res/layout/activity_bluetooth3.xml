@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="fill_parent"
+              android:layout_height="fill_parent"
+              android:background="#fff"
+              android:orientation="vertical" >
+
+    <FrameLayout
+        android:id="@+id/durian_head_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/main_color" >
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="60dp">
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="match_parent"
+                android:id="@+id/iv_back"
+                android:src="@drawable/back_sel"
+                android:layout_marginLeft="10dp"
+                />
+
+            <com.sen5.ocup.gui.SegoTextView
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:text="@string/title_bluetooth"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="#ffffff" />
+        </RelativeLayout>
+    </FrameLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        />
+
+    <LinearLayout
+        android:id="@+id/ocup_gesture_P"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1.5"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:visibility="visible" >
+
+        <ImageView
+            android:id="@+id/cup"
+            android:layout_marginLeft="20dp"
+            android:layout_width="90dp"
+            android:layout_height="fill_parent"
+            android:layout_gravity="center"
+            android:src="@drawable/cup_bluetooth" />
+        <LinearLayout
+            android:id="@+id/layout_bluestatus"
+            android:layout_width="80dp"
+            android:layout_marginLeft="10dp"
+            android:layout_height="50dp"
+            android:gravity="center"
+            >
+            <ImageView
+                android:id="@+id/pb_connectstatus"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/bluetooth"
+                android:visibility="visible" />
+            <com.sen5.ocup.gui.WaitingBar
+                android:id="@+id/waitingBar"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="10dp" >
+            </com.sen5.ocup.gui.WaitingBar>
+        </LinearLayout>
+
+        <ImageView
+            android:paddingTop="60dp"
+            android:paddingBottom="10dp"
+            android:id="@+id/phone"
+            android:layout_marginLeft="-40dp"
+            android:src="@drawable/bluetooth_phone"
+            android:layout_width="140dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"/>
+
+        <LinearLayout
+            android:id="@+id/cupgesture"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:visibility="gone"
+             >
+
+            <ImageView
+                android:id="@+id/gesture"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:src="@drawable/gesture" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:text="@string/connect_tips"
+                android:textColor="@color/result_view"
+                android:textSize="25sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:gravity="center"
+                android:text="@string/connect_tips_desc"
+                android:textColor="@color/result_view"
+                android:textSize="12sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2"
+        >
+
+        <LinearLayout
+            android:id="@+id/layout_customsearch"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:visibility="invisible" >
+
+            <TextView
+                android:id="@+id/tv_research"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="40dp"
+                android:background="@drawable/selector_bluetooth_connect"
+                android:clickable="true"
+                android:gravity="center"
+                android:text="@string/searching"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="#ffffff"
+                android:visibility="visible" />
+
+            <ListView
+                android:id="@+id/listView_device3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="10dp"
+                android:listSelector="#f2dde6"
+                android:visibility="visible" >
+            </ListView>
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/layout_autosearch"
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent"
+            >
+            <Button
+                android:id="@+id/btn_autosearch"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/blue_connect_circle"
+                android:gravity="center"
+                android:text="@string/start_connect"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="#fff" />
+
+            <TextView
+                android:id="@+id/tv_autoconnectstate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/btn_autosearch"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20dp"
+                android:gravity="center"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="#3d3d3d" />
+
+            <EditText
+                android:id="@+id/et_log"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_autoconnectstate"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:singleLine="false"
+                android:clickable="true"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="#3d3d3d"
+                android:visibility="gone"
+                />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <TextView
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="20dp"
+        android:id="@+id/tv_startcustom"
+        android:layout_width="60dp"
+        android:layout_height="32dp"
+        android:layout_gravity="right|center_vertical"
+        android:background="@drawable/shape_bluetooth3"
+        android:gravity="center"
+        android:padding="5dp"
+        android:text="@string/manually_connect"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="@color/main_color" />
+
+</LinearLayout>

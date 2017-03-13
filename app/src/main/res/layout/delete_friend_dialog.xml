@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:background="@drawable/yili_shape_contacts_dialog"
+    android:layout_width="match_parent"
+    android:layout_height="130dp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:textSize="18dp"
+        android:id="@+id/dialog_delete"
+        android:text="@string/dialog_delete"
+        android:textColor="#747474"
+        android:gravity="center"
+        android:paddingLeft="30dp"
+        android:paddingRight="30dp"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="#747474"
+        />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        >
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="@string/dialog_ok"
+            android:gravity="center"
+            android:clickable="true"
+            android:id="@+id/tv_ok"
+            android:textColor="@color/bluetextcolor"
+            android:textSize="18dp"
+            />
+
+        <View
+            android:layout_width="0.5dp"
+            android:layout_height="match_parent"
+            android:background="#747474"
+            />
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="@string/dialog_cancel"
+            android:gravity="center"
+            android:id="@+id/tv_no"
+            android:clickable="true"
+            android:textColor="@color/bluetextcolor"
+            android:textSize="18dp"
+            />
+    </LinearLayout>
+
+</LinearLayout>

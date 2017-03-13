@@ -1,0 +1,582 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:layout_width="fill_parent"
+              android:layout_height="fill_parent"
+              android:background="#eaeaea"
+              android:orientation="vertical" >
+    <FrameLayout
+        android:id="@+id/durian_head_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/main_color" >
+        <RelativeLayout
+            android:id="@+id/title_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="60dp">
+
+            <com.sen5.ocup.gui.SegoTextView
+                android:id="@+id/tv_title"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:text="@string/title_setting"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="#FFFFFF" />
+
+            <ImageView
+                android:id="@+id/iv_bluetooth_state"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_centerVertical="true"
+                android:clickable="true"
+                android:padding="10dp"
+                android:src="@drawable/btn_bluetooth_inactive" />
+
+            <ProgressBar
+                android:id="@+id/pb_bluetooth_connecting"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_centerVertical="true"
+                android:indeterminateDrawable="@drawable/load_progressbar_style"
+                android:padding="15dp"
+                android:visibility="gone" />
+        </RelativeLayout>
+    </FrameLayout>
+
+    <ScrollView
+        android:scrollbars="none"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:scrollbarStyle="outsideOverlay" >
+
+        <!-- 头像 -->
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <RelativeLayout
+                android:id="@+id/relativelayout_headimage"
+                android:layout_width="match_parent"
+                android:layout_height="180dp"
+                android:gravity="center"
+                android:background="@drawable/setting_top_bg"
+                android:clickable="true" >
+
+                <com.sen5.ocup.yili.CircleImageView
+                    android:id="@+id/user_image"
+                    android:src="@drawable/user_me"
+                    android:layout_width="80dp"
+                    android:layout_height="90dp"
+                    android:gravity="center"
+                    app:border_width="2dp"
+                    app:border_color="@color/main_color"
+                    />
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_marginTop="8dp"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/whitetextcolor"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                >
+                <RelativeLayout
+                    android:id="@+id/relativelayout_nickname"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:gravity="center_vertical"
+                    android:paddingBottom="5dp" >
+
+                    <ImageView
+                        android:id="@+id/iv_setting_info"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:src="@drawable/ic_settings_info"
+                        android:layout_centerVertical="true"
+                        />
+
+                    <com.sen5.ocup.gui.SegoTextView
+                        android:layout_toRightOf="@id/iv_setting_info"
+                        android:id="@+id/tv_tip_nickname"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:paddingBottom="8dp"
+                        android:paddingTop="8dp"
+                        android:text="@string/nickname"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textColor="#3d3d3d" />
+
+                    <com.sen5.ocup.gui.SegoTextView
+                        android:id="@+id/nicheng"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_toLeftOf="@+id/iamge2"
+                        android:layout_toRightOf="@+id/tv_tip_nickname"
+                        android:gravity="right"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textColor="#3d3d3d" />
+
+                    <ImageView
+                        android:id="@+id/iamge2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:clickable="true"
+                        android:scaleType="matrix"
+                        android:src="@drawable/mm_submenu" />
+                </RelativeLayout>
+                <!-- 二维码 -->
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.6dp"
+                    android:background="#b9b9b9" />
+
+                <RelativeLayout
+                    android:id="@+id/relativelayout_two_code"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:gravity="center_vertical"
+                    android:paddingBottom="5dp"
+                    android:paddingTop="5dp" >
+
+                    <ImageView
+                        android:id="@+id/iv_setting_qr"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/ic_settings_qr"
+                        />
+
+                    <com.sen5.ocup.gui.SegoTextView
+                        android:layout_toRightOf="@id/iv_setting_qr"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:paddingBottom="8dp"
+                        android:paddingTop="8dp"
+                        android:text="@string/two_dimension_code"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textColor="#3d3d3d" />
+
+                    <ImageView
+                        android:id="@+id/iamge"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:clickable="true"
+                        android:scaleType="matrix"
+                        android:src="@drawable/mm_submenu" />
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/relativelayout_handwarm"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/whitetextcolor"
+                android:clickable="true"
+                android:layout_marginTop="20dp"
+                android:gravity="center_vertical"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:paddingBottom="5dp"
+                android:paddingTop="5dp" >
+
+                <ImageView
+                    android:id="@+id/iv_setting_warmer"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/ic_settings_warmer"
+                    />
+
+                <com.sen5.ocup.gui.SegoTextView
+                    android:layout_toRightOf="@id/iv_setting_warmer"
+                    android:id="@+id/handwarm"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="20dp"
+                    android:paddingBottom="8dp"
+                    android:paddingTop="8dp"
+                    android:text="@string/handwarm"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="#3d3d3d" />
+
+                <ch.ielse.view.SwitchView
+                    android:id="@+id/switch_hand_warme1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="20dp"/>
+                <ImageView
+                    android:visibility="gone"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@id/switch_hand_warme1"
+                    android:layout_marginRight="15dp"
+                    android:id="@+id/iv_load_push_hand_warme1"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:background="@drawable/common_anim_list_loading_tiny"/>
+                <com.sen5.ocup.gui.SwitchView
+                    android:visibility="gone"
+                    android:id="@+id/switch_hand_warmer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="20dp" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:layout_height="wrap_content"
+                android:background="@color/whitetextcolor"
+                android:orientation="vertical"
+                >
+                <!--灯光提醒-->
+                <RelativeLayout
+                    android:id="@+id/relativelayout_watertem"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:gravity="center_vertical"
+                    android:paddingBottom="5dp"
+                    android:paddingTop="5dp" >
+
+                    <ImageView
+                        android:id="@+id/iv_setting_light"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/ic_settings_lightcontrol"
+                        />
+
+                    <com.sen5.ocup.gui.SegoTextView
+                        android:layout_toRightOf="@id/iv_setting_light"
+                        android:id="@+id/tv_watertem"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:paddingBottom="8dp"
+                        android:paddingTop="8dp"
+                        android:text="@string/watertem_led"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textColor="#3d3d3d" />
+                    <!-- android:text="@string/drink_method" -->
+
+                    <com.sen5.ocup.gui.SegoTextView
+                        android:id="@+id/watertem"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_toLeftOf="@+id/image_watertem"
+                        android:layout_toRightOf="@+id/tv_watertem"
+                        android:gravity="right"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textColor="@color/whitetextcolor"
+                        android:visibility="gone" />
+                    <!-- android:text="@string/remind2drink_method" -->
+
+                    <ImageView
+                        android:id="@+id/image_watertem"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:clickable="true"
+                        android:scaleType="matrix"
+                        android:src="@drawable/mm_submenu" />
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="0.6dp"
+                    android:background="#b9b9b9" />
+
+
+                <!-- 震动提醒 -->
+
+                <RelativeLayout
+                    android:id="@+id/relativelayout_vibration"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:paddingBottom="5dp"
+                    android:paddingTop="5dp" >
+
+                    <ImageView
+                        android:id="@+id/iv_setting_shaker"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/ic_settings_shakeremind"
+                        />
+
+                    <com.sen5.ocup.gui.SegoTextView
+                        android:layout_toRightOf="@id/iv_setting_shaker"
+                        android:id="@+id/vibration"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="20dp"
+                        android:paddingBottom="8dp"
+                        android:paddingTop="8dp"
+                        android:text="@string/vibrate_remind"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textColor="#3d3d3d" />
+
+                    <ch.ielse.view.SwitchView
+                        android:id="@+id/switch_vibration1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="20dp"/>
+                    <ImageView
+                        android:visibility="gone"
+                        android:layout_centerVertical="true"
+                        android:layout_toLeftOf="@id/switch_vibration1"
+                        android:layout_marginRight="15dp"
+                        android:id="@+id/iv_load_push_vibration"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:background="@drawable/common_anim_list_loading_tiny"/>
+                    <com.sen5.ocup.gui.SwitchView
+                        android:visibility="gone"
+                        android:id="@+id/switch_vibration"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="20dp" />
+                </RelativeLayout>
+
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="0.6dp"
+                    android:background="#b9b9b9" />
+                <!-- 饮水提醒 -->
+
+                <RelativeLayout
+                    android:id="@+id/Water_project"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:paddingBottom="5dp"
+                    android:paddingTop="5dp" >
+                    <ImageView
+                        android:id="@+id/iv_setting_remind"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/ic_settings_drinkingremind"
+                        />
+
+                    <com.sen5.ocup.gui.SegoTextView
+                        android:layout_toRightOf="@id/iv_setting_remind"
+                        android:id="@+id/water_future"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="20dp"
+                        android:paddingBottom="8dp"
+                        android:paddingTop="8dp"
+                        android:text="@string/remind2drink"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textColor="#3d3d3d" />
+
+                    <com.sen5.ocup.gui.SegoTextView
+                        android:id="@+id/auto_study"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_toLeftOf="@+id/image2"
+                        android:layout_toRightOf="@+id/water_future"
+                        android:gravity="right"
+                        android:text="@string/auto_study_project"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textColor="#3d3d3d"/>
+
+                    <ImageView
+                        android:id="@+id/image2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:clickable="true"
+                        android:scaleType="matrix"
+                        android:src="@drawable/mm_submenu" />
+                </RelativeLayout>
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:orientation="vertical"
+                android:background="@color/whitetextcolor"
+                >
+
+                <RelativeLayout
+                    android:id="@+id/relativelayout_opendata"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:clickable="true"
+                    android:gravity="center_vertical"
+                    android:paddingBottom="5dp"
+                    android:paddingTop="5dp" >
+
+                    <ImageView
+                        android:id="@+id/iv_setting_opendata"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/dataopenswitch"
+                        />
+
+                    <ch.ielse.view.SwitchView
+                        android:id="@+id/switch_opendata"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="20dp"/>
+
+                    <com.sen5.ocup.gui.SegoTextView
+                        android:layout_toRightOf="@id/iv_setting_opendata"
+                        android:id="@+id/ocup_opendata"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:paddingBottom="8dp"
+                        android:paddingTop="8dp"
+                        android:text="是否对好友公开数据"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textColor="#3d3d3d" />
+
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.6dp"
+                    android:background="#b9b9b9" />
+
+                <RelativeLayout
+                    android:id="@+id/relativelayout_setting"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:gravity="center_vertical"
+                    android:paddingBottom="5dp"
+                    android:paddingTop="5dp" >
+
+                    <ImageView
+                        android:id="@+id/iv_setting_setting"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/ic_settings_ocupsetting"
+                        />
+
+                    <com.sen5.ocup.gui.SegoTextView
+                        android:layout_toRightOf="@id/iv_setting_setting"
+                        android:id="@+id/ocup_setting"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:paddingBottom="8dp"
+                        android:paddingTop="8dp"
+                        android:text="@string/setocup"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textColor="#3d3d3d" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:clickable="true"
+                        android:scaleType="matrix"
+                        android:src="@drawable/mm_submenu" />
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.6dp"
+                    android:background="#b9b9b9" />
+
+                <RelativeLayout
+                    android:id="@+id/about_ocup"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:gravity="center_vertical"
+                    android:paddingBottom="5dp"
+                    android:paddingTop="5dp" >
+
+                    <ImageView
+                        android:id="@+id/iv_setting_about"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/ic_settings_about"
+                        />
+
+                    <com.sen5.ocup.gui.SegoTextView
+                        android:layout_toRightOf="@id/iv_setting_about"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:paddingBottom="8dp"
+                        android:paddingTop="8dp"
+                        android:text="@string/about"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textColor="#3d3d3d" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:clickable="true"
+                        android:scaleType="matrix"
+                        android:src="@drawable/mm_submenu" />
+                </RelativeLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

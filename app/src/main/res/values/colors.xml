@@ -1,0 +1,43 @@
+<resources>
+
+    <color name="viewfinder_mask">#60000000</color>
+    <color name="result_view">#b0000000</color>
+    <color name="possible_result_points">#c0ffff00</color>
+    <color name="transparent">#00000000</color>
+    <!-- Otea -->
+     <color name="textcolor">#3d3d3d</color>
+     <color name="smalltextcolor">#7a7a7a</color>
+     <color name="bluetextcolor">#0090e9</color>
+     <color name="whitetextcolor">#ffffff</color>
+    <color name="settingcolor">#707070</color>
+    <color name="green">#06Be04</color>
+
+    <color name="main_color">#FF818C</color>
+    <color name="main_color_2">#66FF818C</color>
+
+    <color name="main_color_pressed">#77ed72a0</color>
+    <color name="red_pressed">#FF6666</color>
+
+    <color name="green_color">#7bb241</color>
+
+    <color name="gray_color">#bcbcbc</color>
+    <color name="gray_color_press">#77bcbcbc</color>
+
+    <color name="gray_text_color">#747474</color>
+    <color name="chooseActivity_text_color">#414141</color>
+
+<!--     <color name="teatext">#7a7a7a</color> -->
+<!--     <color name="teabtcolor">#ff8080</color> -->
+<!--     <color name="teabtcolor_default">#ff5050</color> -->
+<!--     <color name="tealineclor">#0474ff</color> -->
+<!--     <color name="control_bt_color_default">#0474ff</color> -->
+<!--     <color name="control_bt_color">#4da2ff</color> -->
+<!--     <color name="foucus">#2caff6</color> -->
+<!--     <color name="unfoucus">#ffffff</color> -->
+<!--     <color name="table_text_color_p">#ffffff</color> -->
+<!--     <color name="table_text_color">#7a7a7a</color> -->
+<!--     <color name="dialog_seek_bg">#FFFFFF</color> -->
+<!--     <color name="seek_text_color">#7a7a7a</color> -->
+<!--     <color name="seek_tw_color">#3d3d3d</color> -->
+
+</resources>

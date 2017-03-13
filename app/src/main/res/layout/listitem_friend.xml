@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="180dp"
+    android:background="@drawable/shape_friend_item"
+    android:layout_marginLeft="2dp"
+    android:layout_marginRight="2dp"
+    android:orientation="horizontal" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:layout_gravity="center_vertical"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="10dp" >
+
+        <RelativeLayout
+            android:id="@+id/layout_userheader"
+            android:layout_width="100dp"
+            android:layout_height="100dp" >
+
+            <ImageView
+                android:id="@+id/iv_user"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_centerInParent="true"
+                android:src="@drawable/user_me" />
+
+            <RelativeLayout
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_centerInParent="true"
+                android:gravity="right|top" >
+
+                <com.sen5.ocup.gui.SegoTextView
+                    android:id="@+id/tv_offline_msg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="-3dp"
+                    android:layout_marginTop="-13dp"
+                    android:background="@drawable/unread"
+                    android:gravity="center"
+                    android:padding="10dp"
+                    android:textColor="#fff"
+                    android:textSize="18sp"
+                    android:visibility="gone"
+                    />
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center_vertical"
+            android:layout_marginLeft="15dp"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ofans"
+                android:id="@+id/tv_username"
+                android:textColor="#3e3e39"
+                android:textSize="20dp"
+                />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal"
+                >
+
+                <ImageView
+                    android:layout_width="22dp"
+                    android:layout_height="26dp"
+                    android:src="@drawable/ic_water_intake_love"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:id="@+id/tv_progress"
+                    android:gravity="center_vertical"
+                    android:layout_marginLeft="10dp"
+                    android:textColor="@color/main_color"
+                    android:textSize="20dp"
+                    android:text="39%"
+                    />
+
+                <ImageView
+                    android:layout_marginLeft="40dp"
+                    android:layout_width="22dp"
+                    android:layout_height="26dp"
+                    android:src="@drawable/ic_target_water_love"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:id="@+id/tv_goals"
+                    android:gravity="center_vertical"
+                    android:layout_marginLeft="10dp"
+                    android:textColor="@color/main_color"
+                    android:textSize="20dp"
+                    android:text="1800ml"
+                    />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp"
+                >
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#595757"
+                android:text="每日心情:"
+                />
+             <TextView
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 android:layout_marginLeft="4dp"
+                 android:id="@+id/tv_mood"
+                 android:textColor="#595757"
+                 />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                >
+                <TextView
+                    android:layout_alignParentRight="true"
+                    android:layout_width="45dp"
+                    android:layout_height="23dp"
+                    android:textSize="10dp"
+                    android:layout_marginRight="8dp"
+                    android:gravity="center"
+                    android:id="@+id/tv_edit"
+                    android:text="编辑"
+                    android:background="@drawable/shape_edit_mood"
+                    />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+</LinearLayout>
+
+
+    </LinearLayout>

@@ -1,0 +1,23 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layout_startup"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <com.sen5.ocup.yili.CustomVideoView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/guide_vv"
+        />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/startbg"
+        android:scaleType="fitXY"
+        android:id="@+id/iv_startup"
+        android:visibility="gone"
+        />
+
+
+</RelativeLayout>

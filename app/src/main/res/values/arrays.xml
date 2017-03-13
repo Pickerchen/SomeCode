@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="calendar_month">
+        <item>January</item>
+        <item>February</item>
+        <item>March</item>
+        <item>April</item>
+        <item>May</item>
+        <item>June</item>
+        <item>July</item>
+        <item>August</item>
+        <item>September</item>
+        <item>October</item>
+        <item>November</item>
+        <item>December</item>
+    </string-array>
+    
+    <string-array name="calendar_week">
+        <item>@string/Sunday</item>
+        <item>@string/monday</item>
+        <item>@string/tuesday</item>
+        <item>@string/Wednesday</item>
+        <item>@string/Thursday</item>
+        <item>@string/Friday</item>
+        <item>@string/Saturday</item>
+    </string-array>
+    
+    <string-array name="times" translatable="false">
+        <item>01:00</item>
+        <item>02:00</item>
+        <item>03:00</item>
+        <item>04:00</item>
+        <item>05:00</item>
+        <item>06:00</item>
+        <item>07:00</item>
+        <item>08:00</item>
+        <item>09:00</item>
+        <item>10:00</item>
+        <item>11:00</item>
+        <item>12:00</item>
+        <item>13:00</item>
+        <item>14:00</item>
+        <item>15:00</item>
+        <item>16:00</item>
+        <item>17:00</item>
+        <item>18:00</item>
+        <item>19:00</item>
+        <item>20:00</item>
+        <item>21:00</item>
+        <item>22:00</item>
+        <item>23:00</item>
+        <item>24:00</item>
+    </string-array>
+    
+     <string-array name="q">
+        <item>@string/q_one</item>
+        <item>@string/q_two</item>
+        <item>@string/q_three</item>
+        <item>@string/q_four</item>
+        <item>@string/q_five</item>
+        <item>@string/q_six</item>
+        <item>@string/q_serven</item>
+    </string-array>
+    <string-array name="a">
+        <item>@string/a_one</item>
+        <item>@string/a_two</item>
+        <item>@string/a_three</item>
+        <item>@string/a_four</item>
+        <item>@string/a_five</item>
+        <item>@string/a_six</item>
+        <item>@string/a_serven</item>
+    </string-array>
+    
+    
+</resources>

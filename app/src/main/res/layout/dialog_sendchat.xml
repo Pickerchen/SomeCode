@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:layout_marginTop="15dp">
+
+        <com.sen5.ocup.gui.MTextView
+            android:id="@+id/txt_dia_content"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="@string/reSend"
+           	android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="#747474" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_clearcloud"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="0dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <CheckBox
+			android:visibility="gone"
+            android:id="@+id/checkbox_recoveryclouddata"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:button="@null"
+            android:checked="false"
+            android:drawableRight="@drawable/back_sel_check"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="@color/main_color"/>
+
+    </LinearLayout>
+
+	<TextView
+		android:layout_width="match_parent"
+		android:layout_height="0.5dp"
+		android:background="#747474"
+		/>
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="50dp"
+		android:orientation="horizontal"
+		>
+		<Button
+			android:background="@color/transparent"
+			android:layout_width="0dp"
+			android:layout_height="match_parent"
+			android:layout_weight="1"
+			android:text="@string/dialog_ok"
+			android:gravity="center"
+			android:clickable="true"
+			android:id="@+id/btn_ok"
+			android:textColor="@color/bluetextcolor"
+			android:textSize="18dp"
+			/>
+
+		<View
+			android:layout_width="0.5dp"
+			android:layout_height="match_parent"
+			android:background="#747474"
+			/>
+		<Button
+			android:background="@color/transparent"
+			android:layout_width="0dp"
+			android:layout_height="match_parent"
+			android:layout_weight="1"
+			android:text="@string/dialog_cancel"
+			android:gravity="center"
+			android:id="@+id/btn_cancel"
+			android:clickable="true"
+			android:textColor="@color/bluetextcolor"
+			android:textSize="18dp"
+			/>
+	</LinearLayout>
+
+</LinearLayout>

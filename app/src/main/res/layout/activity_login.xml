@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_login"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.sen5.ocup.yili.LoginActivity"
+    android:orientation="vertical"
+    android:background="@drawable/bg_choose"
+    android:transitionName="share_bg"
+    >
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        />
+
+    <LinearLayout
+        android:id="@+id/ll_widget"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="3"
+        android:layout_marginTop="40dp"
+        android:orientation="vertical"
+        >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/ll_textInputLayout"
+        android:orientation="vertical"
+        android:layout_alignParentBottom="true"
+        android:paddingLeft="40dp"
+        android:paddingRight="40dp"
+        android:layout_marginBottom="40dp"
+        >
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/userNameWrapper"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_marginTop="4dp">
+
+            <EditText
+                android:layout_marginTop="10dp"
+                style="?android:attr/textViewStyle"
+                android:textColor="@color/gray_color"
+                android:drawableBottom="@drawable/seletor_username_line"
+                android:textSize="20sp"
+                android:background="@null"
+                android:id="@+id/username"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"/>
+        </android.support.design.widget.TextInputLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            >
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/passwordWrapper"
+                android:layout_below="@+id/userNameWrapper"
+                android:layout_width="0dp"
+                android:layout_weight="3"
+                android:layout_height="55dp"
+                android:layout_marginTop="10dp"
+                >
+
+                <EditText
+                    android:layout_marginTop="10dp"
+                    style="?android:attr/textViewStyle"
+                    android:textColor="@color/gray_color"
+                    android:drawableBottom="@drawable/seletor_username_line"
+                    android:textSize="20sp"
+                    android:background="@null"
+                    android:id="@+id/password2"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"/>
+            </android.support.design.widget.TextInputLayout>
+
+            <TextView
+                android:id="@+id/tv_getCode"
+                android:clickable="true"
+                android:textSize="12sp"
+                android:layout_marginLeft="3dp"
+                android:background="@drawable/selector_timecountdown"
+                android:text="@string/getcode"
+                android:gravity="center"
+                android:textColor="@color/whitetextcolor"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_marginBottom="15dp"
+                android:layout_height="match_parent"
+                />
+        </LinearLayout>
+    </LinearLayout>
+
+        <Button
+            android:id="@+id/btn_login"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="40dp"
+            android:background="@drawable/selector_register_sure"
+            android:text="@string/login"
+            android:textColor="@color/whitetextcolor"
+            android:textSize="16dp"
+            />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        />
+
+</LinearLayout>

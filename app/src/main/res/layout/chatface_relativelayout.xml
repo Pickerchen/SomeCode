@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.sen5.ocup.gui.FaceRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/FaceRelativeLayout"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="#fff"
+    >
+
+    <RelativeLayout
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:id="@+id/rl_input"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/iv_sendoradd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:onClick="true"
+            android:src="@drawable/addfri_sel" />
+
+        <ImageView
+            android:id="@+id/iv_face"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_toLeftOf="@+id/iv_sendoradd"
+            android:clickable="true"
+            android:src="@drawable/face_sel" />
+
+        <EditText
+            android:hint="发送新消息"
+            android:id="@+id/et_sendmessage"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_margin="10dp"
+            android:layout_toLeftOf="@+id/iv_face"
+            android:background="@drawable/input"
+            android:lineSpacingExtra="2dp"
+            android:maxLines="3"
+            android:maxLength="100"
+            android:textSize="18sp" />
+      
+    </RelativeLayout>
+   <TextView 
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:background="#cbcbcb"/>
+    <RelativeLayout
+        android:id="@+id/ll_facechoose"
+        android:layout_width="fill_parent"
+        android:layout_height="200dip"
+        android:layout_below="@id/rl_input"
+        android:background="#fff"
+        android:visibility="gone" >
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/vp_contains"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <LinearLayout
+            android:id="@+id/iv_image"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/layout_face_sort"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="10dip"
+            android:gravity="center"
+            android:orientation="horizontal" >
+        </LinearLayout>
+         <LinearLayout
+            android:id="@+id/layout_face_sort"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="6dip"
+            android:orientation="horizontal" 
+            android:visibility="gone">
+            <TextView 
+                android:id="@+id/tv_emoji"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:gravity="center"
+                android:text="表情"
+                android:textSize="18sp"
+                android:clickable="true"/>
+            <TextView 
+                android:id="@+id/tv_emoji_anim"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:gravity="center"
+                android:text="动画"
+                android:textSize="18sp"
+                android:clickable="true"/>
+        </LinearLayout>
+    </RelativeLayout>
+
+    <include
+        android:id="@+id/inclu_chatadd"
+        android:layout_width="fill_parent"
+        android:layout_height="200dp"
+        android:layout_below="@id/rl_input"
+        layout="@layout/chatadd_layout"
+        android:visibility="gone" />
+
+</com.sen5.ocup.gui.FaceRelativeLayout>

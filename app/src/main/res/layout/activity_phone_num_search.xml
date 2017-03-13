@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <FrameLayout
+        android:id="@+id/durian_head_layout_origin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/main_color" >
+        <RelativeLayout
+            android:id="@+id/title_layout_origin"
+            android:layout_width="fill_parent"
+            android:layout_height="60dp"
+            >
+
+            <TextView
+                android:id="@+id/tv_title"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:text="@string/search_friend"
+                android:textColor="#FFFFFF"
+                android:textAppearance="?android:attr/textAppearanceLarge"  />
+            <ImageView
+                android:id="@+id/iv_back"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:padding="10dp"
+                android:layout_centerVertical="true"
+                android:clickable="true"
+                android:src="@drawable/back_sel"/>
+        </RelativeLayout>
+    </FrameLayout>
+
+
+    <FrameLayout
+        android:layout_below="@id/durian_head_layout_origin"
+        android:id="@+id/durian_head_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/main_color" >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            >
+        <RelativeLayout
+            android:id="@+id/title_layout"
+            android:layout_width="0dp"
+            android:layout_weight="4"
+            android:layout_height="40dp"
+            android:gravity="center_vertical"
+            android:layout_marginLeft="20dp"
+            android:background="@drawable/shape_contacts_search"
+            >
+
+            <ImageView
+                android:layout_centerInParent="true"
+                android:layout_marginLeft="15dp"
+                android:layout_centerVertical="true"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/ic_search"
+                android:id="@+id/iv_search"
+                />
+
+            <EditText
+                android:visibility="gone"
+                style="?android:attr/textViewStyle"
+                android:cursorVisible="true"
+                android:id="@+id/et_search"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="50dp"
+                android:hint="@string/inputphoneNum"
+                android:background="@null"
+                android:textSize="12dp"
+                android:layout_toRightOf="@id/iv_search"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                />
+
+        </RelativeLayout>
+
+            <TextView
+                android:id="@+id/tv_sure"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:textSize="18dp"
+                android:gravity="center"
+                android:layout_height="wrap_content"
+                android:text="@string/dialog_ok"
+                android:textColor="@color/selector_tv_cancel"
+                android:clickable="true"
+                />
+        </LinearLayout>
+    </FrameLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:layout_below="@id/durian_head_layout"
+        android:id="@+id/recyclerview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+</RelativeLayout>

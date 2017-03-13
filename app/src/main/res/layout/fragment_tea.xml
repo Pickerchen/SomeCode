@@ -1,0 +1,325 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+
+        <!-- xmlns:circle="http://schemas.android.com/apk/res/com.sen5.ocup" -->
+
+        <FrameLayout
+            android:id="@+id/durian_head_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/main_color" >
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="60dp">
+
+            <com.sen5.ocup.gui.SegoTextView
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:text="@string/title_tea"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="#FFFFFF" />
+
+            <ImageView
+                android:id="@+id/iv_bluetooth_state"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_centerVertical="true"
+                android:clickable="true"
+                android:padding="10dp"
+                android:src="@drawable/btn_bluetooth_inactive" />
+
+            <ProgressBar
+                android:id="@+id/pb_bluetooth_connecting"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_centerVertical="true"
+                android:indeterminateDrawable="@drawable/load_progressbar_style"
+                android:padding="15dp"
+                android:visibility="gone" />
+        </RelativeLayout>
+        </FrameLayout>
+
+        <RelativeLayout
+            android:id="@+id/tea_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="0dp"
+            android:layout_weight="9"
+            android:orientation="vertical" >
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/rose_tea"
+                android:layout_marginBottom="30dp"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="重瓣红玫瑰"
+                android:textSize="16dp"
+                android:textColor="#818181"
+                android:layout_centerHorizontal="true"
+                android:layout_alignParentBottom="true"
+                />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="20dp"
+            android:layout_weight="6"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="0dp"
+                android:paddingTop="15dp"
+                android:layout_weight="3"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal" >
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    >
+
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:src="@drawable/ic_chawei"
+                        />
+                    <TextView
+                        android:layout_marginTop="20dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="甘香可口"
+                        android:textColor="#818181"
+                        />
+
+                    <TextView
+                        android:layout_marginTop="20dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="回甘持久"
+                        android:textColor="#818181"
+                        />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    >
+
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:src="@drawable/ic_chashengdi"
+                        />
+                    <TextView
+                        android:layout_marginTop="20dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="山东平阴"
+                        android:textColor="#818181"
+                        />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    >
+
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:src="@drawable/ic_chaling"
+                        />
+                    <TextView
+                        android:layout_marginTop="20dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0.5月"
+                        android:textColor="#818181"
+                        />
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="0dp"
+                android:layout_weight="2"
+                android:gravity="center"
+                android:visibility="gone"
+                android:orientation="horizontal" >
+                  <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    android:layout_marginRight="20dp"
+                    android:layout_weight="1"
+                    android:gravity="bottom|center_vertical">
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="fill_parent"
+                        android:gravity="center"
+                        android:visibility="invisible">
+
+                    <ImageView
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:src="@drawable/btn_tastea"
+                        android:gravity="center"/>
+                        <com.sen5.ocup.gui.SegoTextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:gravity="center"
+                        android:text="@string/tw"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:textColor="#2caff6" />
+                     </RelativeLayout>
+
+                    <com.sen5.ocup.gui.SegoTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="fill_parent"
+                        android:background="@drawable/btn_frame_n"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:text="@string/stop_tea"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:textColor="#2caff6"
+                        android:visibility="invisible" />
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="3"
+                    android:orientation="vertical"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="0dp"
+                        android:layout_weight="2"
+                        android:src="@drawable/temperature_n" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal" >
+
+                        <com.sen5.ocup.gui.SegoTextView
+                            android:id="@+id/tv_curwatertemperature"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:text="70"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:textColor="#000" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/tempratureunit"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:textColor="#000" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    android:layout_marginRight="20dp"
+                    android:layout_weight="1"
+                    android:gravity="bottom|center_vertical">
+
+                    <RelativeLayout
+                        android:id="@+id/layout_time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="fill_parent"
+                        android:gravity="center">
+
+                    <ImageView
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:src="@drawable/btn_tastea"
+                        android:gravity="center"/>
+                        <com.sen5.ocup.gui.SegoTextView
+                        android:id="@+id/tv_time"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:gravity="center"
+                        android:text="@string/tw"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:textColor="#2caff6" />
+                     </RelativeLayout>
+
+                    <com.sen5.ocup.gui.SegoTextView
+                        android:id="@+id/tv_stop"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/btn_frame_n"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:text="@string/stop_tea"
+                        android:visibility="invisible"
+                        android:textColor="#2caff6" />
+                </RelativeLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="200dp"
+            android:layout_height="40dp"
+            android:layout_marginBottom="15dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="5dp"
+            android:clickable="true"
+            android:background="@drawable/selector_startconnecting"
+            android:gravity="center_vertical" >
+
+            <com.sen5.ocup.gui.NumberProgressBar
+                android:id="@+id/numberbar_tea"
+                style="@style/NumberProgressBar_tea"
+                android:visibility="gone"
+                custom:progress="100" />
+
+            <com.sen5.ocup.gui.SegoTextView
+                android:id="@+id/tv_countdowm"
+                android:layout_width="fill_parent"
+                android:layout_height="50dp"
+                android:gravity="center"
+                android:text="@string/start_tea"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="#fff" />
+        </RelativeLayout>
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <FrameLayout
+        android:id="@+id/durian_head_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/main_color" >
+     <RelativeLayout
+        android:id="@+id/title_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="60dp">
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text="@string/title_ochat"
+            android:textColor="#FFFFFF"
+            android:textAppearance="?android:attr/textAppearanceLarge"  />
+        <ImageView 
+            android:id="@+id/iv_bluetooth_state"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:padding="10dp"
+            android:layout_centerVertical="true"
+            android:clickable="true"
+            android:src="@drawable/btn_bluetooth_inactive"/>
+        <ProgressBar
+            android:id="@+id/pb_bluetooth_connecting"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_centerVertical="true"
+            android:indeterminateDrawable="@drawable/load_progressbar_style"
+            android:padding="15dp"
+            android:visibility="gone" />
+        <ImageView
+            android:id="@+id/iv_addfriend"
+            android:layout_width="40dp"
+            android:layout_height="fill_parent"
+            android:layout_alignParentRight="true"
+            android:scaleType="centerInside"
+            android:padding="10dp"
+            android:gravity="center"
+            android:clickable="true"
+            android:src="@drawable/selector_add_friend" />
+    </RelativeLayout>
+    </FrameLayout>
+    
+    <com.sen5.ocup.gui.MyListViewPullDownAndUp
+        android:layout_marginLeft="2dp"
+        android:layout_marginRight="2dp"
+        android:id="@+id/listview_friendlist"
+        android:dividerHeight="10dp"
+        android:divider="@color/whitetextcolor"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"/>
+    
+</LinearLayout>

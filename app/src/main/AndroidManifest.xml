@@ -1,0 +1,367 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="com.sen5.ocup"
+          android:versionCode="201703062"
+          android:versionName="2.0.2"> <!-- android:sharedUserId="android.uid.system" -->
+    <!-- 3.0 -->
+    <!-- 在android studio 中所有权限都不能重复 -->
+    <uses-sdk
+        android:minSdkVersion="19"
+        android:targetSdkVersion="19"/>
+
+    <!-- 为方便检查某些模块的权限是否已添加，所以下方的权限会出现重复，并没有什么影响 -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.WRITE_SETTINGS"/>
+    <!-- <uses-permission android:name="android.permission.INTERNET" /> -->
+    <!-- <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" /> -->
+    <!-- <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" /> -->
+    <!-- <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" /> -->
+    <!-- <uses-permission android:name="android.permission.READ_PHONE_STATE" /> -->
+    <uses-permission android:name="android.permission.VIBRATE"/>
+    <!-- 允许程序读取或写入系统设置 -->
+    <uses-permission android:name="android.permission.ALLOW_MOCK_LOCATION"/>
+
+    <!-- ShareSDK需要的权限 -->
+    <uses-permission android:name="android.permission.MANAGE_ACCOUNTS"/>
+    <uses-permission android:name="android.permission.GET_ACCOUNTS"/>
+    <uses-permission android:name="android.permission.CAMERA"/>
+
+    <!-- 扫描二维码需要的权限 -->
+    <uses-feature android:name="android.hardware.camera"/>
+    <uses-feature android:name="android.hardware.camera.autofocus"/>
+
+    <uses-permission android:name="android.permission.FLASHLIGHT"/>
+
+    <!-- 蓝牙通信需要的权限 -->
+    <uses-permission android:name="android.permission.BLUETOOTH"/>
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN"/>
+
+    <!-- 环信需要的权限 -->
+    <!-- <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" /> -->
+    <uses-permission android:name="android.permission.CALL_PHONE"/>
+    <!-- <uses-permission android:name="android.permission.GET_TASKS" /> -->
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS"/>
+    <!-- 屏蔽HOME键需要的权限 -->
+    <uses-permission android:name="android.permission.DISABLE_KEYGUARD"/>
+    <!-- 友盟数据统计分析需要的权限 -->
+    <!-- <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" /> -->
+
+
+    <!-- 友盟自动更新需要的权限 -->
+    <uses-permission android:name="android.permission.READ_LOGS"/>
+
+    <!-- sharesdk sms所需权限 -->
+    <uses-permission android:name="android.permission.READ_CONTACTS"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.RECEIVE_SMS"/>
+    <uses-permission android:name="android.permission.READ_SMS"/>
+    <uses-permission android:name="android.permission.GET_TASKS"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+
+    <!-- 监听网络 -->
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+
+    <!-- 使用traceView的权限 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"/>
+
+    <!--手机振动-->
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <!--获取应用在前台还是后台信息-->
+    <uses-permission android:name ="android.permission.GET_TASKS"/>
+    <!--获取window级别弹框-->
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+
+    <application
+        android:name=".activity.OcupApplication"
+        android:hardwareAccelerated="false"
+        android:icon="@drawable/icon_192"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:theme="@style/AppTheme">
+
+        <!-- android:theme="@style/Theme.AppStartLoad" -->
+        <!-- android:theme="@android:style/Theme.NoTitleBar.Fullscreen" -->
+
+
+        <!-- 设置环信SDK的appkey，注意name为EASEMOB_APPKEY -->
+        <meta-data
+            android:name="EASEMOB_APPKEY"
+            android:value="rrioo#yili"/>
+        <!-- 友盟-id -->
+        <meta-data
+            android:name="UMENG_APPKEY"
+            android:value="5514b9fdfd98c589cf00090a"/>
+        <!-- 友盟-渠道标识 -->
+        <meta-data
+            android:name="UMENG_CHANNEL"
+            android:value="SEN5_TW"/>
+        <!-- rrioo#product -->
+        <!-- android:value="asdf#sandbox" /> -->
+        <!-- 991glasses#mytestim -->
+
+        <activity
+            android:name=".activity.BlueTooth3Activity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait">
+        </activity>
+        <!-- android:configChanges="keyboardHidden|orientation|screenSize" -->
+        <activity
+            android:name=".activity.MainActivity"
+            android:configChanges="orientation|screenSize"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan">
+
+            <!-- <intent-filter> -->
+            <!-- <action android:name="android.intent.action.MAIN" /> -->
+            <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
+            <!-- </intent-filter> -->
+        </activity>
+        <activity
+            android:name=".activity.StartupActivity"
+            android:configChanges="orientation|screenSize"
+            android:label="@string/app_name"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/startUPTheme"
+            android:windowSoftInputMode="adjustPan">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <!-- 聊天界面 -->
+        <activity
+            android:name=".activity.ChatActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar"
+            android:windowSoftInputMode="adjustResize">
+        </activity>
+        <!-- 日历界面 -->
+        <activity
+            android:name=".activity.DetailedDataActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize"/>
+        <!-- 涂鸦 -->
+        <activity
+            android:name=".activity.ScrawlActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="@string/app_name"
+            android:screenOrientation="landscape">
+        </activity>
+        <!-- 涂鸦动画 -->
+        <activity
+            android:name=".activity.ScrawlAnimActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="@string/app_name"
+            android:screenOrientation="landscape">
+        </activity>
+        <!-- 二维码 -->
+        <activity
+            android:name=".activity.TwocodeActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="@string/app_name">
+        </activity>
+        <!-- 昵称 -->
+        <activity
+            android:name=".activity.NicknameActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="@string/app_name">
+        </activity>
+        <!-- 水温提示灯光设置界面 -->
+        <activity
+            android:name=".activity.WaterTemLEDActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="@string/app_name">
+        </activity>
+        <!-- 二维码扫描界面 -->
+        <activity
+            android:name=".zxing.CaptureActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="@string/app_name">
+        </activity>
+        <!-- 饮水计划 -->
+        <activity
+            android:name=".activity.WaterProjectActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="@string/app_name">
+        </activity>
+
+        <!-- OAuth Version 2. 使用  WebView 辅助进行ImplicitGrant方式授权必须 -->
+        <!-- <activity -->
+        <!-- android:name="com.tencent.weibo.webview.OAuthV2AuthorizeWebView" -->
+        <!-- android:configChanges="keyboardHidden|orientation|screenSize" -->
+        <!-- android:label="@string/app_name" > -->
+        <!-- </activity> -->
+        <!-- 固件升级 -->
+        <activity
+            android:name=".activity.UpdateFirmWare"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait"/>
+        <!-- 水杯设置 -->
+        <activity
+            android:name=".activity.Ocup_setting_activity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait"/>
+        <!-- 帮助中心 -->
+        <activity
+            android:name=".activity.HelpOcupActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait"/>
+        <!-- 关于ocup -->
+        <activity
+            android:name=".activity.AboutOcupActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait"/>
+        <!-- 被添加或解除好友时弹出的对话框 -->
+        <activity
+            android:name=".activity.DialogActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@style/custom_dialog"/>
+        <!-- 固件版本更新提示对话框 -->
+        <activity
+            android:name=".activity.Dialog_updateActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@style/custom_dialog"/>
+
+        <!-- MobUIShell的路径是固定的，一定要在“cn.sharesdk.framework”下，因为它在Share-Core中。 -->
+        <activity
+            android:name="com.mob.tools.MobUIShell"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            android:windowSoftInputMode="stateHidden|adjustResize">
+            <intent-filter>
+                <data android:scheme="tencent100371282"/>
+
+                <action android:name="android.intent.action.VIEW"/>
+
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <!-- 微信分享回调 -->
+        <activity
+            android:name="cn.sharesdk.demo.wxapi.WXEntryActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+
+        <!-- QQ健康授权 -->
+        <activity
+            android:name="com.tencent.tauth.AuthActivity"
+            android:launchMode="singleTask"
+            android:noHistory="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+
+                <data android:scheme="tencent1101513923"/>
+            </intent-filter>
+        </activity>
+
+        <!-- QQ健康授权 -->
+        <activity
+            android:name="com.tencent.connect.common.AssistActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+
+        <!-- 日期选择对话框 -->
+        <activity
+            android:name=".activity.DatePickerDlg"
+            android:theme="@style/dialogStyle"/>
+
+        <!-- 蓝牙广播接受者 -->
+        <receiver android:name=".receiver.Bluetooth3Receiver">
+            <intent-filter>
+                <action android:name="android..adapter.action.STATE_CHANGED"/>
+                <action android:name="android.blubluetoothetooth.adapter.action.DISCOVERY_STARTED"/>
+                <action android:name="android.bluetooth.adapter.action.DISCOVERY_FINISHED"/>
+                <action android:name="android.bluetooth.adapter.action.CONNECTION_STATE_CHANGED"/>
+                <action android:name="android.bluetooth.device.action.ACL_CONNECTED"/>
+                <action android:name="android.bluetooth.device.action.BOND_STATE_CHANGED"/>
+                <action android:name="android.bluetooth.device.action.ACL_DISCONNECT_REQUESTED"/>
+                <action android:name="android.bluetooth.device.action.ACL_DISCONNECTED"/>
+                <action android:name="android.bluetooth.device.action.FOUND"/>
+                <action android:name="android.bluetooth.device.action.PAIRING_REQUEST"/>
+                <action android:name="com.sen5.ocup.receiver.bluetooth.recieverNFCData"/>
+                <action android:name="com.sen5.ocup.receiver.bluetooth.socketconnected"/>
+            </intent-filter>
+        </receiver>
+        <!-- 环信广播接收 -->
+        <receiver android:name=".receiver.HuanxinBroadcastReceiver">
+            <intent-filter>
+                <!-- <action android:name="easemob.newmsg.asdf.sandbox" /> -->
+                <action android:name="easemob.newmsg.rrioo.yili"/>
+                <action android:name="com.sen5.nhh.ocup.receiver.HuanxinBroadcastReceiver.disconnect"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name=".receiver.HuanxinBroadcastReceiver1">
+            <intent-filter>
+                <action android:name="easemob.cmdmsg.rrioo.yili"/>
+            </intent-filter>
+        </receiver>
+
+        <!-- 自定义 网络连接状态变化接收者 android.net.conn.CONNECTIVITY_CHANGE -->
+        <receiver android:name=".receiver.NetworkStateBroadcastReceiver">
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE"/>
+            </intent-filter>
+        </receiver>
+
+        <service android:name=".service.BluetoothService">
+            <intent-filter>
+                <action android:name="com.sen5.ocup.service.BluetoothService"/>
+            </intent-filter>
+        </service>
+
+        <service android:name=".service.BackGroundControlService">
+
+        </service>
+
+        <service android:name=".service.TeaService">
+        </service>
+
+        <activity
+            android:name=".activity.RegisterActivity"
+            >
+        </activity>
+        <activity
+            android:name=".activity.ChooseActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar.fullScreen">
+        </activity>
+        <activity android:name=".yili.ContactsActivity">
+        </activity>
+        <activity android:name=".yili.UserInfoActivity">
+        </activity>
+        <activity android:name=".yili.PhoneNumSearchActivity">
+        </activity>
+        <activity android:name=".yili.ContactsInfoActivity"/>
+        <activity android:name=".yili.LoginActivity"
+                  android:theme="@style/Theme.AppCompat.Light.NoActionBar.fullScreen">
+        </activity>
+    </application>
+
+</manifest>
